@@ -116,9 +116,6 @@ public class AdminPage {
 		public void validateMessageText(String expectedText){
 			String actualText = wait.until(ExpectedConditions.visibilityOfElementLocated(messageAfterSubmit)).getText();
 			
-			System.err.println("Actual: " + actualText);
-			System.err.println("Expected: " + expectedText);
-			
 			Assert.assertEquals(expectedText, actualText);
 		}
 	}
